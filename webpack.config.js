@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts','.tsx','.js'],
+    extensions: ['.ts', '.tsx', '.js'],
     alias: {
       '@': path.join(__dirname, 'src')
     }
