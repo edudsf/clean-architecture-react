@@ -10,19 +10,14 @@
       "@/*": ["*"]
     },
     "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": true, 
     "rootDir": "src",
     "baseUrl": "src",
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "noEmit": true,
     "jsx": "react-jsx"
   },
   "include": [
