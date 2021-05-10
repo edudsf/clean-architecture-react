@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Login } from '@/presentaion/pages'
+import { Router } from '@/presentaion/components'
 import GlobalStyle from '@/presentaion/styles/styles'
 
 ReactDOM.render(
   <>
     <GlobalStyle />
-    <Login />
+    <Router />
   </>,
   document.getElementById('main')
 )
