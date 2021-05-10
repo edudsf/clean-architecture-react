@@ -1,6 +1,6 @@
 import React from 'react'
 import * as c from './style'
-import Spinner from '@/presentaion/components/spinner/index'
+import { Spinner } from '@/presentaion/components'
 
 const Login: React.FC = () => {
   return (
