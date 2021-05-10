@@ -9,18 +9,20 @@
     "paths": {
       "@/*": ["*"]
     },
-    "allowJs": true,
+    "allowJs": false,
     "esModuleInterop": true,
-    "strict": true, 
     "rootDir": "src",
     "baseUrl": "src",
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "declaration": false,
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
