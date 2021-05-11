@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from '@/presentaion/components'
-import GlobalStyle from '@/presentaion/styles/styles'
+import { Router } from '@/presentation/components'
+import GlobalStyle from '@/presentation/styles/styles'
 
 ReactDOM.render(
   <>

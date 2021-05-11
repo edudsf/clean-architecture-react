@@ -1,7 +1,7 @@
-import React, { useContext } from 'React'
+import React, { useContext } from 'react'
 import { Spinner } from '../index'
 import { Content } from './style'
-import Context from '@/presentaion/contexts/form/formContext'
+import Context from '@/presentation/contexts/form/formContext'
 
 const FormStatus: React.FC = () => {
   const { loading, errorMessage } = useContext(Context)

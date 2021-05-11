@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as c from './style'
-import Context from '@/presentaion/contexts/form/formContext'
-import { FormStatus } from '@/presentaion/components'
+import Context from '@/presentation/contexts/form/formContext'
+import { FormStatus } from '@/presentation/components'
 
 type StateProps = {
   loading: boolean
