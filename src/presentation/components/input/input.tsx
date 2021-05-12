@@ -13,7 +13,6 @@ const Input: React.FC<Props> = (props: Props) => {
       ...stateLogin,
       [event.target.name]: event.target.value
     })
-    console.log(stateLogin)
   }
 
   return (
