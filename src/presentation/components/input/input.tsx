@@ -18,7 +18,7 @@ const Input: React.FC<Props> = (props: Props) => {
   return (
     <InputContainer>
       <input {...props} data-testid={props.name} onChange={handleChange} />
-      <span data-testid={`${props.name}-status`} title={error}></span>
+      <span data-testid={`${props.name}-status`} title={error || 'Tudo certo!'}></span>
     </InputContainer>
   )
 }
