@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as c from './style'
 import Context from '@/presentation/contexts/form/formContext'
 import { FormStatus, Input } from '@/presentation/components'
+import { Validation } from '@/presentation/protocols/validation'
 
-const Login: React.FC = () => {
-  const [stateLogin] = useState({
-    loading: false
+type Props = {
+  validation: Validation
+}
+
+const Login: React.FC<Props> = ({ validation }: Props) => {
+  const [stateLogin, setStateLogin] = useState({
+    loading: false,
+    email: ''
   })
 
   const [errorState] = useState({
@@ -14,11 +20,15 @@ const Login: React.FC = () => {
     errorMessage: ''
   })
 
+  useEffect(() => {
+    validation.validate({ email: stateLogin.email })
+  }, [stateLogin.email])
+
   return (
     <c.Container>
       <img src="https://cdn.zeplin.io/5dcc566ddc1332bf7fb4f450/assets/AF87AD0A-A82B-4DF6-832B-5E31309C7C05.png" alt="" title="" />
       <c.Content>
-        <Context.Provider value={{ stateLogin, errorState }}>
+        <Context.Provider value={{ stateLogin, errorState, setStateLogin }}>
           <form>
             <h2>Entrar</h2>
             <Input type="email" name="email" placeholder="Digite seu e-mail" />
