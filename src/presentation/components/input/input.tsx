@@ -9,7 +9,7 @@ const Input: React.FC<Props> = (props: Props) => {
   const error = errorState[props.name]
   return (
     <InputContainer>
-      <input {...props} title={'teste'} />
+      <input {...props} />
       <span data-testid={`${props.name}-status`} title={error}></span>
     </InputContainer>
   )
