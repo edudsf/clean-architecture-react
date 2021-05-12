@@ -4,12 +4,11 @@ import { Content } from './style'
 import Context from '@/presentation/contexts/form/formContext'
 
 const FormStatus: React.FC = () => {
-  const { loading, errorMessage } = useContext(Context)
-
+  const { stateLogin, errorState } = useContext(Context)
   return (
     <Content data-testid="error-wrap">
-      {loading && <Spinner />}
-      {errorMessage && <span>{errorMessage}</span>}
+      {stateLogin.loading && <Spinner />}
+      {errorState.errorMessage && <span>{errorState.errorMessage}</span>}
     </Content>
   )
 }

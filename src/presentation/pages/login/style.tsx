@@ -44,19 +44,4 @@ export const Content = styled.div`
     font-style: normal;
     line-height: normal;
   }
-  
-  & input {
-    margin: 8px 0;
-    border-radius: 4px;
-    border: solid 1px #b8b8b8;
-    padding: 16px;
-
-    &::placeholder {
-      color: #d0d0d0;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
 `
