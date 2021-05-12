@@ -28,9 +28,8 @@ export const Content = styled.div`
 
     & > button:first-of-type {
       font-size: 15px;
-      border-radius: 4px;
       background-color: #5cb646;
-      border-radius: 2px;
+      border-radius: 3px;
       color: #fff;
     }
   }
