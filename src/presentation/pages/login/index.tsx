@@ -29,12 +29,20 @@ const Login: React.FC<Props> = ({ validation }: Props) => {
     })
   }, [stateLogin.email, stateLogin.password])
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault()
+    setStateLogin({
+      ...stateLogin,
+      loading: true
+    })
+  }
+
   return (
     <c.Container>
       <img src="https://cdn.zeplin.io/5dcc566ddc1332bf7fb4f450/assets/AF87AD0A-A82B-4DF6-832B-5E31309C7C05.png" alt="" title="" />
       <c.Content>
         <Context.Provider value={{ stateLogin, errorState, setStateLogin }}>
-          <form>
+          <form onSubmit={handleSubmit}>
             <h2>Entrar</h2>
             <Input type="email" name="email" placeholder="Digite seu e-mail" />
             <Input type="password" name="password" placeholder="Digite sua senha" />

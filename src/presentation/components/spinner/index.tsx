@@ -3,7 +3,7 @@ import { Content } from './style'
 
 const Spinner: React.FC = () => {
   return (
-    <Content><div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div></Content>
+    <Content data-testid='spinner'><div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div></Content>
   )
 }
 
