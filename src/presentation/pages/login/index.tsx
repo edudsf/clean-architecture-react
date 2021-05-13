@@ -33,7 +33,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
-    if (stateLogin.loading) {
+    if (stateLogin.loading || errorState.email || errorState.password) {
       return
     }
     setStateLogin({
@@ -51,7 +51,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
       <img src="https://cdn.zeplin.io/5dcc566ddc1332bf7fb4f450/assets/AF87AD0A-A82B-4DF6-832B-5E31309C7C05.png" alt="" title="" />
       <c.Content>
         <Context.Provider value={{ stateLogin, errorState, setStateLogin }}>
-          <form onSubmit={handleSubmit}>
+          <form data-testid="form" onSubmit={handleSubmit}>
             <h2>Entrar</h2>
             <Input type="email" name="email" placeholder="Digite seu e-mail" />
             <Input type="password" name="password" placeholder="Digite sua senha" />
