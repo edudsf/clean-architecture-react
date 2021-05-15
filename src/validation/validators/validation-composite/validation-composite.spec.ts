@@ -1,4 +1,4 @@
-import { FieldValidationSpy } from '../test/mock-field-validation'
+import { FieldValidationSpy } from '../../test/mock-field-validation'
 import { ValidationComposite } from './validation-composite'
 
 type SutTypes = {
@@ -25,5 +25,11 @@ describe('ValidationComposite', () => {
     fieldValidationSpy[1].error = new Error('any_error_message')
     const error = sut.validate('any_field', 'any_value')
     expect(error).toBe('any_error_message')
+  })
+
+  test('Should return error if away validation fails ', () => {
+    const { sut } = makeSut()
+    const error = sut.validate('any_field', 'any_value')
+    expect(error).toBeFalsy()
   })
 })
