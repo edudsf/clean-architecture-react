@@ -38,4 +38,13 @@ describe('AxiosHttpClient', () => {
       body: mockedAxiosResult.data
     })
   })
+
+  test('Should return the correct statusCode and body on failure', async () => {
+    const sut = makeSut()
+    const httpResponse = await sut.post(mockPostRequest())
+    expect(httpResponse).toEqual({
+      statusCode: mockedAxiosResult.status,
+      body: mockedAxiosResult.data
+    })
+  })
 })
