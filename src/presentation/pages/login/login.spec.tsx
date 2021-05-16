@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
 import Login from './index'
