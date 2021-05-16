@@ -1,6 +1,7 @@
 {
   "name": "boilerplate-react-ts",
   "version": "1.0.0",
+  "author": "Eduardo Silva",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +12,6 @@
     "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
