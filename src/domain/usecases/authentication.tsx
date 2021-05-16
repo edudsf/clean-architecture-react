@@ -8,5 +8,5 @@ export type AuthenticationParams = {
 /* Retorna os dados da conta do usuários.
 Alguém irá implementar a classe. Necessário o método, parâmetro e retorno */
 export interface Authentication {
-  auth (params: AuthenticationParams): Promise<AccountModel>
+  auth: (params: AuthenticationParams) => Promise<AccountModel>
 }
